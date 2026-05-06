@@ -8,9 +8,10 @@ Byte    Explanation
 F0H:    System Exclusive Message status
 41H:    Manufacturer ID (Roland)
 dev:    Device ID (00H-1FH, 7FH) * 7FH = Broadcast
-01H:    Model ID # 1 (VG-800)
-06H:    Model ID # 2 (VG-800)
-04H:    Model ID # 3 (VG-800)
+00H:    Model ID # 1 (SY-1000)
+00H:    Model ID # 2 (SY-1000)
+00H:    Model ID # 3 (SY-1000)
+69H:    Model ID # 4 (SY-1000)
 12H:    Command ID (DT1)
 aaH:    Address MSB
 bbH:    Address
@@ -25,6 +26,8 @@ F7H:    EOX (End of Exclusive)
 Editor Mode ON: F0 41 10 00 00 00 69 12 7F 00 00 01 01 7F F7
 Editor Mode OFF: F0 41 10 00 00 00 69 12 7F 00 00 01 00 00 F7
 
-TUNER ON  = F0 41 10 00 00 00 69 12 7F 00 00 02 00 7F F7
-TUNER OFF = F0 41 10 00 00 00 69 12 7F 00 00 02 02 7D F7
+TUNER ON: F0 41 10 00 00 00 69 12 7F 00 00 02 00 7F F7
+TUNER OFF: F0 41 10 00 00 00 69 12 7F 00 00 02 02 7D F7
 
+NORMAL INPUT OFF: F0 41 10 00 00 00 69 12 10 00 12 01 00 5D F7
+NORMAL INPUT ON: F0 41 10 00 00 00 69 12 10 00 12 01 01 5C F7
